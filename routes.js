@@ -35,14 +35,15 @@ router.post('/login', async (req, res) => {
     signupdata.find({ mail: req.body.mail, password: req.body.password }).select().exec().then(
         doc => {
 
-            if (doc) {
+            if (doc.length) {
+                console.log(doc)
                 res.status(200).json({
                     data: doc
-
                 })
             } else {
                 res.status(200).json({
                     message: "no matching data found",
+                    status:"failed",
 
                 })
 

@@ -9,7 +9,7 @@ const cors = require('cors')
 const apicall = require('./routes')
 
 
-mongoose.connect('');
+mongoose.connect('mongodb+srv://Deepu:7700@cluster0.5yjfycv.mongodb.net/Trukapp?retryWrites=true&w=majority');
 mongoose.Promise = global.Promise;
 
 
